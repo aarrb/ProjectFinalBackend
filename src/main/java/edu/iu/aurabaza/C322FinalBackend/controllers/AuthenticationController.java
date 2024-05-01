@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
+//authentication controller works
+
 public class AuthenticationController {
     private final AuthenticationManager authenticationManager;
     private final TokenService tokenService;
@@ -31,6 +33,8 @@ public class AuthenticationController {
         this.customerRepository = customerRepository;
         this.flowersRepository = flowersRepository;
     }
+
+    //tested and works
     @PostMapping("/signup")
     public void signup(@RequestBody Customer customer) {
         try {
@@ -43,6 +47,7 @@ public class AuthenticationController {
         }
     }
 
+    //tested and works
     @PostMapping("/login")
     public String login(@RequestBody Customer customer) {
         Authentication authentication = authenticationManager

@@ -14,6 +14,8 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
+
+//flowers works and tested
 @RequestMapping("/flowers")
 public class FlowersController {
     FlowersFileRepository flowersFileRepository;
